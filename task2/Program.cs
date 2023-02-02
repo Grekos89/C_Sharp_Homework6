@@ -8,14 +8,14 @@ int b1 = new Random().Next(0, 10);
 int b2 = new Random().Next(0, 10);
 int k1 = new Random().Next(0, 10);
 int k2 = new Random().Next(0, 10);
-System.Console.WriteLine(GetIntersections(b1, b2, k1, k2));
 
-int GetIntersections(int b1, int b2, int k1, int k2)
+void Intersection(int b1, int b2, int k1, int k2)
 {
-    int y = 0;
-    int x = 0;
-    x = (b2 - b1) / (k2 - k1);
-    y = k1 * x + b1;
-    return x;
-    return y;
+int y = 0;
+int x = 0;
+x = (b2 - b1) / (k2 - k1);
+y = k1 * x + b1;
+System.Console.WriteLine($"({x},{y})");
 }
+
+Intersection(b1, b2, k1, k2);
